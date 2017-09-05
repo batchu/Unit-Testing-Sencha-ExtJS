@@ -1,0 +1,13 @@
+{
+  "name": "Unit-Testing-Sencha-ExtJS",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/batchu/Unit-Testing-Sencha-ExtJS.git",
+  "author": "Prashanth Batchu <me@prashu.net>",
+  "license": "MIT",
+  "dependencies": {
+    "jasmine": "^2.8.0",
+    "karma": "^1.7.1",
+    "typescript": "^2.5.2"
+  }
+}
