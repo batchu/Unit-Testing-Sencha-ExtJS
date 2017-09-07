@@ -5,9 +5,18 @@
   "repository": "https://github.com/batchu/Unit-Testing-Sencha-ExtJS.git",
   "author": "Prashanth Batchu <me@prashu.net>",
   "license": "MIT",
+  "devDependencies": {
+    "@types/jasmine": "^2.5.54",
+    "jasmine": "^2.6.0",
+    "jasmine-core": "^2.6.4",
+    "karma": "^1.7.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-html2js-preprocessor": "^1.1.0",
+    "karma-jasmine": "^1.1.0",
+    "karma-typescript": "^3.0.5",
+    "yarn": "^0.27.5"
+  },
   "dependencies": {
-    "jasmine": "^2.8.0",
-    "karma": "^1.7.1",
-    "typescript": "^2.5.2"
+    "typescript": "^2.4.2"
   }
 }

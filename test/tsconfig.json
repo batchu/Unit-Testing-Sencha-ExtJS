@@ -1,0 +1,19 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "baseUrl": ".",
+    "outDir": "./dist",
+    "paths": {
+      "spec/*": ["./spec/*"]
+    },
+    "include": [
+      "../../../ext/**/*",
+      "../app/**/*",
+      "../app/**/*"
+    ],
+    "module": "es6",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "target": "es6"
+  }
+}
