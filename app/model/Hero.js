@@ -1,4 +1,4 @@
-Ext.define('Fiddle.model.User', {
+Ext.define('SuperHeroes.model.Hero', {
     extend: 'Ext.data.Model',
 
     fields: [{

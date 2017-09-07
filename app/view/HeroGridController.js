@@ -1,6 +1,6 @@
-Ext.define('Fiddle.view.GridController', {
+Ext.define('SuperHeroes.view.HeroGridController', {
     extend: 'Ext.app.ViewController',
-    alias: 'controller.mygridpanel_controller',
+    alias: 'controller.herogridcontroller',
 
     onAdd: function () {
         var form = this.lookupReference('name_form'),
@@ -9,7 +9,7 @@ Ext.define('Fiddle.view.GridController', {
 
         if (form.isValid()) {
             values = form.getValues();
-            model = Ext.create('Fiddle.model.User', values);
+            model = Ext.create('SuperHeroes.model.User', values);
             store.add(model);
             store.sync();
         }

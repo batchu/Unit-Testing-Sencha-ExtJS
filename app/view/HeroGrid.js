@@ -1,17 +1,17 @@
-Ext.define('Fiddle.view.Grid', {
+Ext.define('SuperHeroes.view.HeroGrid', {
     extend: 'Ext.grid.Panel',
-    alias: 'widget.mygridpanel',
+    alias: 'widget.herogridpanel',
 
     requires: [
-        'Fiddle.view.GridController',
-        'Fiddle.view.GridModel'
+        'SuperHeroes.view.HeroGridController',
+        'SuperHeroes.view.HeroGridModel'
     ],
 
     viewModel: {
-        type: 'mygridpanel_model'
+        type: 'herogridmodel'
     },
 
-    controller: 'mygridpanel_controller',
+    controller: 'herogridcontroller',
     title: 'Super Heroes Grid',
     height:500,
     bind: {

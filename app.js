@@ -1,8 +1,8 @@
 Ext.application({
-    name: 'Fiddle',
-    mainView: 'Fiddle.view.Grid',
+    name: 'SuperHeroes',
+    mainView: 'SuperHeroes.view.HeroGrid',
 
     requires: [
-        'Fiddle.view.Grid'
+        'SuperHeroes.view.HeroGrid'
     ]
 });
