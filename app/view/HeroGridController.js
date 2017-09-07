@@ -9,7 +9,7 @@ Ext.define('SuperHeroes.view.HeroGridController', {
 
         if (form.isValid()) {
             values = form.getValues();
-            model = Ext.create('SuperHeroes.model.User', values);
+            model = Ext.create('SuperHeroes.model.Hero', values);
             store.add(model);
             store.sync();
         }
