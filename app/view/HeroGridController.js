@@ -3,8 +3,8 @@ Ext.define('SuperHeroes.view.HeroGridController', {
     alias: 'controller.herogridcontroller',
 
     onAdd: function () {
-        var form = this.lookupReference('name_form'),
-            store = this.getViewModel().getStore('Names'), // this isnt necessary i am just doing to show it being added to the grid
+        const form = this.lookupReference('name_form'),
+            store = this.getViewModel().getStore('Names'),
             values, model;
 
         if (form.isValid()) {
@@ -20,7 +20,7 @@ Ext.define('SuperHeroes.view.HeroGridController', {
     },
 
     onDelete: function (t, rowid, colid, item, evt, rec) {
-        var store = rec.store;
+        const store = rec.store;
 
         store.remove(rec);
         store.sync();
