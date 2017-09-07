@@ -12,7 +12,7 @@ Ext.define('Fiddle.view.Grid', {
     },
 
     controller: 'mygridpanel_controller',
-    title: 'My Grid Panel',
+    title: 'Super Heroes Grid',
     height:500,
     bind: {
         store: '{Names}'
