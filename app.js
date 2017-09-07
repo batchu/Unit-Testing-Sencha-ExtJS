@@ -1,9 +1,8 @@
 Ext.application({
-    name : 'Fiddle',
+    name: 'Fiddle',
+    mainView: 'Fiddle.view.Grid',
 
-    requires : [
-        'Fiddle.view.Main'
-    ],
-
-    mainView : 'Fiddle.view.Main'
+    requires: [
+        'Fiddle.view.Grid'
+    ]
 });

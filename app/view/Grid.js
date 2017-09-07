@@ -1,31 +1,89 @@
 Ext.define('Fiddle.view.Grid', {
-    extend : 'Ext.grid.Grid',
-    xtype  : 'fiddle-grid',
+    extend: 'Ext.grid.Panel',
+    alias: 'widget.mygridpanel',
 
-    columns : [
-        {
-            text      : 'First Name',
-            flex      : 1,
-            dataIndex : 'firstName'
-        },
-        {
-            text      : 'Last Name',
-            flex      : 1,
-            dataIndex : 'lastName'
-        },
-        {
-            text      : 'Email',
-            flex      : 1,
-            dataIndex : 'email',
-            cell      : {
-                tools  : {
-                    close : {
-                        handler : 'removeUser',
-                        tooltip : 'Delete User',
-                        zone    : 'end'
-                    }
-                }
-            }
+    requires: [
+        'Fiddle.view.GridController',
+        'Fiddle.view.GridModel'
+    ],
+
+    viewModel: {
+        type: 'mygridpanel_model'
+    },
+
+    controller: 'mygridpanel_controller',
+    title: 'My Grid Panel',
+    height:500,
+    bind: {
+        store: '{Names}'
+    },
+
+    listeners: {
+        edit: 'onUpdate'
+    },
+
+    columns: [{
+        xtype: 'gridcolumn',
+        dataIndex: 'first_name',
+        text: 'First',
+        editor: {
+            xtype: 'textfield'
         }
-    ]
+    }, {
+        xtype: 'gridcolumn',
+        dataIndex: 'last_name',
+        text: 'Last',
+        editor: {
+            xtype: 'textfield'
+        }
+    }, {
+        xtype: 'actioncolumn',
+        width: 50,
+        sortable: false,
+        menuDisabled: true,
+        align: 'center',
+        text: 'Delete',
+        items: [{
+            icon: 'https://cdn2.iconfinder.com/data/icons/aspneticons_v1.0_Nov2006/delete_16x16.gif',
+            tooltip: 'Delete Name',
+            handler: 'onDelete'
+        }]
+    }],
+
+    dockedItems: [{
+        xtype: 'toolbar',
+        dock: 'top',
+        items: [{
+            xtype: 'form',
+            reference: 'name_form',
+            layout: {
+                type: 'hbox',
+                align: 'stretch'
+            },
+            defaults: {
+                labelWidth: 35
+            },
+            items: [{
+                xtype: 'textfield',
+                fieldLabel: 'First',
+                allowBlank: false,
+                name: 'first_name'
+            }, {
+                xtype: 'textfield',
+                fieldLabel: 'Last',
+                margin: '0 0 0 10',
+                allowBlank: false,
+                name: 'last_name'
+            }]
+        }, {
+            xtype: 'button',
+            text: 'Add Name',
+            handler: 'onAdd'
+        }]
+    }],
+
+    plugins: [{
+        ptype: 'rowediting',
+        clicksToEdit: 1
+    }]
 });
