@@ -7,7 +7,7 @@ Ext.define('SuperHeroes.view.HeroGridModel', {
     ],
 
     stores: {
-        Names: {
+        heroStore: {
             autoLoad: true,
             model: 'SuperHeroes.model.Hero'
         }

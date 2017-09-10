@@ -1,4 +1,5 @@
-Ext.define('SuperHeroes.view.HeroGrid', {
+Ext.define('SuperHeroes.view.HeroGrid',
+    {
     extend: 'Ext.grid.Panel',
     alias: 'widget.herogridpanel',
 
@@ -15,7 +16,7 @@ Ext.define('SuperHeroes.view.HeroGrid', {
     title: 'Super Heroes Grid',
     height:500,
     bind: {
-        store: '{Names}'
+        store: '{heroStore}'
     },
 
     listeners: {
@@ -55,7 +56,7 @@ Ext.define('SuperHeroes.view.HeroGrid', {
         dock: 'top',
         items: [{
             xtype: 'form',
-            reference: 'name_form',
+            reference: 'hero_add_form',
             layout: {
                 type: 'hbox',
                 align: 'stretch'
