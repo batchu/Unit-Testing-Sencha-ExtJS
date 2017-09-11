@@ -16,7 +16,7 @@ describe("Tests for Hero Grid Component", function(){
         expect(this.cmp.title).toEqual("Super Heroes Grid")
     })
 
-    it("Grid's first column must be first_name", function(){
+    it("Grid's first column must be the first name", function(){
         expect(this.cmp.columns[0].dataIndex).toEqual("first_name")
     })
 
