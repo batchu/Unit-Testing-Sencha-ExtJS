@@ -9,13 +9,16 @@ Ext.define('SuperHeroes.view.HeroGridController', {
 
         if (form.isValid()) {
             values = form.getValues()
-            model = this.generateModel()
+            model = this.generateModel(values)
             store.add(model)
             store.sync()
         }
     },
-    generateModel :function(){
-        return Ext.create('SuperHeroes.model.Hero', values)
+    generateModel: function (values) {
+        if (values)
+            return Ext.create('SuperHeroes.model.Hero', values)
+        else
+            return null
     },
 
     onUpdate: function (editor, edit) {
